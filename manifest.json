@@ -1,0 +1,15 @@
+{
+  "name": "Autologin",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        // URL of localhost / the local dev server
+        "http://localhost:8000/accounts/login/?next_url=/"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
